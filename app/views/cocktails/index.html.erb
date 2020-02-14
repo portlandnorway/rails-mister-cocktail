@@ -1,0 +1,12 @@
+<h1>Welcome to the IMDDB (I M DRUNK DATABASE</h1>
+<div class="container">
+    <% @cocktails.each do |c| %>
+      <%= link_to c, {:class=>"card"} do %>
+        <%= c.name %>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+<div class="Add New Button">
+  <%= link_to "Add New", new_cocktail_path %>
+</div>

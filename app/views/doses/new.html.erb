@@ -1,0 +1,10 @@
+<h1>Add some doses to <%= @cocktail.name %>!</h1>
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+  <div class="form-group">
+    <%= f.input :description %>
+    <%= f.association :ingredient %>
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<%= link_to "Cancel", @cocktail %>
